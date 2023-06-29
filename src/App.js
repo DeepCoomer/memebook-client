@@ -4,13 +4,13 @@ import Home from "./Pages/home/Home";
 import Profile from "./Pages/profile/Profile";
 import Login from "./Pages/accounts/login/Login";
 import Register from "./Pages/accounts/register/Register";
-import { useViewportSize } from "@mantine/hooks";
+// import { useViewportSize } from "@mantine/hooks";
 // import { getAllPosts } from './Services/api';
 
 function App() {
   const [user, setuser] = useState({});
   const [toggle, settoggle] = useState(false);
-  const { width } = useViewportSize();
+  // const { width } = useViewportSize();
 
   const getUser = async () => {
     let response = await fetch(
@@ -30,9 +30,9 @@ function App() {
   };
 
   useEffect(() => {
-    if (width< 700) {
-      alert("Please open in desktop mode")
-    }
+    // if (width< 500) {
+    //   alert("Please open in desktop mode")
+    // }
     getUser();
     // console.log(user.username)
     // eslint-disable-next-line
